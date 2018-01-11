@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         WME URLoc
 // @version      0.1
-// @description  Updates page's URL to current WME location to easily reload the page.
+// @description  Updates page's URL to current WME location
 // @author       turbopirate
 // @include      /^https:\/\/(www|beta)\.waze\.com(\/\w{2,3}|\/\w{2,3}-\w{2,3}|\/\w{2,3}-\w{2,3}-\w{2,3})?\/editor\b/
 // @grant        none
