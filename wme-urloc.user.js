@@ -1,9 +1,8 @@
 // ==UserScript==
 // @name         WME URLoc
-// @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  Updates address bar to current WME location.
-// @author       You
+// @author       turbopirate
 // @include      /^https:\/\/(www|beta)\.waze\.com(\/\w{2,3}|\/\w{2,3}-\w{2,3}|\/\w{2,3}-\w{2,3}-\w{2,3})?\/editor\b/
 // @grant        none
 // ==/UserScript==
