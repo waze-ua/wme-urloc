@@ -1,2 +1,2 @@
 # wme-urloc
-TamperMonkey script to page url with current location
+TamperMonkey script to update page url with editor current location
