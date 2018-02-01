@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         WME URLoc
-// @version      0.2
+// @version      0.3
 // @description  Updates page's URL to current WME location
 // @author       turbopirate
 // @include      /^https:\/\/(www|beta)\.waze\.com(\/\w{2,3}|\/\w{2,3}-\w{2,3}|\/\w{2,3}-\w{2,3}-\w{2,3})?\/editor\b/
 // @grant        none
+// @namespace https://greasyfork.org/users/166361
 // ==/UserScript==
 
 (function() {
@@ -22,7 +23,11 @@
             let lat = Math.round(lonlat.lat * 100000) / 100000;
             let urloc = `${window.location.protocol}//${window.location.host}${window.location.pathname}?env=row&lon=${lon}&lat=${lat}&zoom=${wazeapi.map.zoom}`;
             window.history.pushState({path:urloc}, document.title, urloc);
+            last.lat = wazeapi.map.center.lat;
+            last.lon = wazeapi.map.center.lon;
+            last.zoom = wazeapi.map.zoom;
         }
+
         setTimeout(updateURL, 500);
     };
 
