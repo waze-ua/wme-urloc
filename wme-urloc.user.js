@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         WME URLoc
-// @version      2018.02.01.001
+// @version      2018.06.01.001
 // @description  Updates page's URL to current WME location
 // @author       turbopirate
 // @include      /^https:\/\/(www|beta)\.waze\.com(\/\w{2,3}|\/\w{2,3}-\w{2,3}|\/\w{2,3}-\w{2,3}-\w{2,3})?\/editor\b/
@@ -11,7 +11,7 @@
 (function() {
     'use strict';
 
-    let wazeapi = Waze || window.Waze;
+    let wazeapi = W || window.W;
     let projI = new OpenLayers.Projection("EPSG:900913");
     let projE = new OpenLayers.Projection("EPSG:4326");
     let last = {};
@@ -32,7 +32,7 @@
     };
 
     let waitWaze = () => {
-        wazeapi = Waze || window.Waze;
+        wazeapi = W || window.W;
 
         if (wazeapi && wazeapi.map) {
             last.lat = wazeapi.map.center.lat;
