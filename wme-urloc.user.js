@@ -1,8 +1,8 @@
 // ==UserScript==
 // @name         WME URLoc
-// @version      2019.11.25.002 (corrected by_chk update)
+// @version      2019.11.25.002
 // @description  Updates page's URL to current WME location
-// @author       turbopirate
+// @author       turbopirate (corrected by_chk update)
 // @include      /^https:\/\/(www|beta)\.waze\.com(\/\w{2,3}|\/\w{2,3}-\w{2,3}|\/\w{2,3}-\w{2,3}-\w{2,3})?\/editor\b/
 // @grant        none
 // @namespace https://greasyfork.org/users/166361
