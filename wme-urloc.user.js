@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         WME URLoc
-// @version      2019.11.25.002
+// @version      2021.09.15.001
 // @description  Updates page's URL to current WME location
 // @author       turbopirate (corrected by_chk update)
 // @include      /^https:\/\/(www|beta)\.waze\.com(\/\w{2,3}|\/\w{2,3}-\w{2,3}|\/\w{2,3}-\w{2,3}-\w{2,3})?\/editor\b/
@@ -21,7 +21,8 @@
             let lonlat=(new OpenLayers.LonLat(wazeapi.map.getCenter().lon, wazeapi.map.getCenter().lat)).transform(projI, projE);
             let lon = Math.round(lonlat.lon * 100000) / 100000;
             let lat = Math.round(lonlat.lat * 100000) / 100000;
-            let urloc = `${window.location.protocol}//${window.location.host}${window.location.pathname}?env=row&lon=${lon}&lat=${lat}&zoom=${wazeapi.map.getZoom()}`;
+//            let urloc = `${window.location.protocol}//${window.location.host}${window.location.pathname}?env=row&lon=${lon}&lat=${lat}&zoom=${wazeapi.map.getZoom()}`;
+            let urloc = `${window.location.protocol}//${window.location.host}${window.location.pathname}?env=row&lon=${lon}&lat=${lat}&zoomLevel=${wazeapi.map.getZoom()}`;
             window.history.pushState({path:urloc}, document.title, urloc);
             last.lat = wazeapi.map.getCenter().lat;
             last.lon = wazeapi.map.getCenter().lon;
